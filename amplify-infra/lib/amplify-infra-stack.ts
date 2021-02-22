@@ -9,7 +9,7 @@ export class AmplifyInfraStack extends cdk.Stack {
     const amplifyApp = new amplify.App(this, "sample-react-app ", {
       sourceCodeProvider: new amplify.GitHubSourceCodeProvider({
         owner: "pgjaiganesh",
-        repository: "nextjs_sample.git/tree/main",
+        repository: "nextjs_sample.git",
         oauthToken: cdk.SecretValue.secretsManager("amplify_secret", {
           jsonField: "amplify_user",
         }),
